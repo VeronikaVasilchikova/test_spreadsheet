@@ -14,7 +14,6 @@ const modalWindowForSpreadsheetConfig = {
       },
       {
         view: "label",
-        // width: 220,
         label: "Change category",
       },
       {
@@ -70,13 +69,10 @@ const modalWindowForSpreadsheetConfig = {
                 $$("ssheet").setCellValue(2, 2, "Category");
                 countSaveAttempts++;
               }
-              console.log(data);
 
               data.forEach(item => {
                 if(item.categoryId !== "1") {
-                  console.log("1");
                   if (categories.exists(item.categoryId)) {
-                    console.log("2");
                     const categoryName = webix.copy(categories.getItem(item.categoryId)).value;
                     $$("ssheet").setCellValue(item.id, 2, categoryName);
                     $$("ssheet").refresh();
