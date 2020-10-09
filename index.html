@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Webix -->
+      <script src="webix/codebase/webix.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="webix/codebase/webix.css" type="text/css">
+
+      <!-- Webix SpreadSheet -->
+      <script src="webix/spreadsheet/codebase/spreadsheet.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="webix/spreadsheet/codebase/spreadsheet.css">
+
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.css" type="text/css" charset="utf-8">
+
+      <!-- Data -->
+      <script src="data/categories.js" type="text/javascript"></script>
+      <script src="data/spreadSheetBaseData.js" type="text/javascript"></script>
+      <script src="data/selectedItemCodeData.js" type="text/javascript"></script>
+
+      <!-- Modal window -->
+      <script src="modalWindows/index.js" type="text/javascript"></script>
+
+      <title>Test_Spreadsheet</title>
+    </head>
+    <body>
+      <script type="text/javascript">
+        webix.ready(() => {
+        // enabling CustomScroll
+        if (!webix.env.touch && webix.env.scrollSize)
+        webix.CustomScroll.init();
+        });
+      </script>
+      <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>
